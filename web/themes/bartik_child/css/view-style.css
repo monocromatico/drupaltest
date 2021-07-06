@@ -1,0 +1,5 @@
+/*This also can be achieved with javascript, and custom css classes through the twig template*/
+table tr:nth-child(5n -2){
+	background: darkblue;
+
+}

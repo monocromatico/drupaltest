@@ -1,0 +1,91 @@
+//CSS Styles:
+// B.4.1 (pick one of two)
+
+// This way allows to add pseudo classes in context with the anchor, making it more mainteainable
+a {  
+    &.some-class {
+         ... 
+    }
+}
+
+// .some-class {
+//     ... 
+// }
+
+
+// B.4.2 (pick one of three)
+/*They have different purposes without the > sign, affects all child-class under parent class, with it afects only direct children, third option is broader in context of the dom disregards the parent class, I would need to know the objective of the definition to make a better choice, but if we are thinking in affecting all child classes under the parent, then this is the way to go.*/
+
+.parent-class {
+    .child-class {
+         ... 
+    }
+    //> .child-class {
+    //     ... 
+    //}
+}
+
+//.child-class--variant {
+//     ... 
+//}
+
+// B.4.3 (pick one of two)
+/*.parent-class {
+	#child-id {
+         ... 
+    }
+}*/
+#child-id { //An ID element must be unique, this would suffice
+     ... 
+}
+// B.4.4 (pick one of three)ul.sorted-list {
+    li {
+        a {
+             ... 
+        }
+    }
+}
+.sorted-list a {
+     ... 
+}
+.sorted-list {
+    > li {
+        > a {
+             ... 
+        }
+    }
+}
+// B.4.5 (pick one of two)input[type="submit"] {
+     ... 
+}
+.submit-button {
+     ... 
+}
+
+// B.4.6 (pick one of two)
+// I like pseudo classes better, it saves precious seconds to the backend dev.
+ul li:last-child {
+     ... 
+}
+
+//ul li.last-child {
+//     ... 
+//}
+
+// B.4.7 (pick one of two)
+
+//li:nth-child(3) {
+//     ... 
+//}
+
+//I would use this to be more specific to unordered lists
+ul {
+    :nth-child(3) {
+         ... 
+    }
+
+    //This is horrible
+    //li.first + li + li {
+    //     ... 
+    //}
+}
